@@ -4,7 +4,7 @@ class Complement
     'C' => 'G',
     'T' => 'A',
     'A' => 'U'
-  }
+  }.freeze
 
   class << self
     def of_dna(strand)
