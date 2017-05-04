@@ -1,4 +1,3 @@
-require 'pry'
 class Raindrops
   class << self
     RAINDROPS = {
@@ -10,8 +9,7 @@ class Raindrops
     def convert(drop)
       rain = ''
       RAINDROPS.each { |k, v| rain += v if (drop % k).zero? }
-      return drop.to_s if rain.empty?
-      rain
+      rain.empty? drop.to_s : rain
     end
   end
 end
